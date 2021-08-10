@@ -5,4 +5,7 @@ urlpatterns = [
     path('second/<name>', views.second),
     path('peliculas', views.peliculas),
     path('pelis', views.pelis),
+    path('dojos', views.dojos),
+    path('sensei', views.sensei),
+    path('samurai', views.samurai),
 ]

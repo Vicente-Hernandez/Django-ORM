@@ -46,6 +46,8 @@ class Dojos(models.Model):
     state = models.CharField(max_length=255)
     desc = models.CharField(max_length=255, default='dojo antiguo')
 
+    #campos de trazabilidad
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -53,6 +55,8 @@ class Ninjas(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     dojo = models.ForeignKey(Dojos, related_name="ninja", on_delete = models.CASCADE)
+    
+    #campos de trazabilidad
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
